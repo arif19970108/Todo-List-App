@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List with Advanced Features</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 id="greeting"></h2>
+        
+        <button id="toggleTheme">🌙 Dark Mode</button>
+        
+        <div class="filters">
+            <select id="sortTasks">
+                <option value="newest">Sort by Newest</option>
+                <option value="oldest">Sort by Oldest</option>
+            </select>
+            
+            <select id="filterTasks">
+                <option value="all">Show All</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+            </select>
+        </div>
+
+        <input type="text" id="taskInput" placeholder="Enter your task">
+        <input type="date" id="taskDate">
+        
+        <select id="taskCategory">
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+            <option value="Study">Study</option>
+        </select>
+        
+        <button onclick="addTask()">Add Task</button>
+
+        <!-- Progress Bar -->
+        <progress id="taskProgress" value="0" max="100"></progress>
+        <p id="progressText">Task Completion: 0%</p>
+
+        <ul id="taskList"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
